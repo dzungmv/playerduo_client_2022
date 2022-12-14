@@ -1,0 +1,489 @@
+@import 'normalize.css';
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+:root {
+    --primary-color: #fe2c55;
+    --primary-color-hover: #de002c;
+    --text-color: #333;
+    --primary-boxshadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    --box-boxshadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --tooltip-boxshadow: rgb(0 0 0 / 12%) 0 2px 12px;
+    --font-family: 'SF Pro Display', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    // overflow-x: hidden;
+}
+
+html {
+    font-size: 1rem;
+    scroll-behavior: smooth;
+    // overflow: hidden !important;
+    overflow-x: hidden;
+    margin-right: calc(-1 * (100vw - 100%));
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.5;
+    background-color: rgb(250, 250, 250);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+[tabindex] {
+    outline: none;
+    border: none;
+    font-family: var(--font-family);
+}
+
+hr {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #dddfe2;
+}
+
+a {
+    text-decoration: none !important;
+    color: var(--text-color) !important;
+}
+
+// SP pro
+
+// @font-face {
+//     font-family: SF;
+//     src: url('/assets/fonts/SF-Pro-Display-Light.otf');
+//     font-weight: 300;
+// }
+
+// @font-face {
+//     font-family: SF;
+//     src: url('/assets/fonts/SF-Pro-Display-Medium.otf');
+//     font-weight: 500;
+// }
+
+// @font-face {
+//     font-family: SF;
+//     src: url('/assets/fonts/SF-Pro-Display-Regular.otf');
+//     font-weight: 400;
+// }
+
+// @font-face {
+//     font-family: SF;
+//     src: url('/assets/fonts/SF-Pro-Display-Semibold.otf');
+//     font-weight: 600;
+// }
+
+// @font-face {
+//     font-family: SF;
+//     src: url('/assets/fonts/SF-Pro-Display-Thin.otf');
+//     font-weight: 100;
+// }
+
+// @font-face {
+//     font-family: SF;
+//     src: url('/assets/fonts/SF-Pro-Display-Ultralight.otf');
+//     font-weight: 200;
+// }
+
+// Custom tippy
+body {
+    #tippy-2 {
+        transform: translate3d(5px, 50px, 0px) !important;
+        inset: 0px 12px auto auto !important;
+    }
+    .tippy-box {
+        border-radius: 8px;
+        font-size: 1rem;
+        line-height: 22px;
+        background-color: rgba(84, 84, 84, 0.92);
+        max-width: 500px !important;
+    }
+
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+
+    .tippy-content {
+        padding: 8px 9px;
+    }
+
+    .tippy-box[data-placement^='bottom'] > .tippy-arrow::before {
+        top: -8px;
+    }
+}
+
+// Slider
+body {
+    .swiper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        overflow: hidden;
+        list-style: none;
+        padding: 0;
+        z-index: 1 !important;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition-property: transform;
+    }
+
+    .swiper-button-prev {
+        font-size: 1rem !important;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 55%;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid var(--primary-color);
+        border-radius: 50%;
+        color: var(--primary-color);
+        font-weight: 700;
+        outline: 0;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        background-color: transparent;
+
+        &::after {
+            font-size: 16px;
+        }
+
+        &:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+    }
+
+    .swiper-button-prev {
+        &:after {
+            position: relative;
+            left: -1px;
+        }
+    }
+
+    .swiper-button-next {
+        &:after {
+            position: relative;
+            left: 1px;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-container-rtl .swiper-button-next {
+        left: 10px;
+        right: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-container-rtl .swiper-button-prev {
+        right: 10px;
+        left: auto;
+    }
+
+    .swiper-button-prev.swiper-button-disabled,
+    .swiper-button-next.swiper-button-disabled {
+        opacity: 0;
+        cursor: auto;
+        pointer-events: none;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: var(--primary-color);
+    }
+}
+
+// Offcanvas
+body {
+    .offcanvas-header {
+        border-bottom: 1px solid rgba(22, 24, 35, 0.1);
+
+        padding: 8px;
+    }
+
+    .offcanvas-backdrop {
+        z-index: 98 !important;
+    }
+
+    .offcanvas-title {
+        font-size: 2rem;
+        font-weight: 500;
+        color: var(--primary-color);
+    }
+
+    .offcanvas {
+        z-index: 99 !important;
+    }
+
+    .offcanvas.offcanvas-start {
+        width: 35% !important;
+        top: 60px !important;
+
+        @media screen and (max-width: 739px) {
+            width: 100% !important;
+        }
+
+        @media screen and (min-width: 740px) and (max-width: 1023px) {
+            width: 80% !important;
+        }
+    }
+
+    .offcanvas.offcanvas-bottom {
+        width: 40% !important;
+        // position: absolute;
+        // right: 0;
+        left: auto;
+
+        &.offcanvas-backdrop.show {
+            opacity: 0;
+            background-color: #fe2c55;
+        }
+    }
+
+    .offcanvas-header .btn-close {
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        font-size: 1.3rem;
+        &:hover {
+            background-color: rgba(22, 24, 35, 0.2);
+        }
+    }
+
+    // .offcanvas-body {
+    //     background: rgba(255, 255, 255, 0.25);
+    //     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    //     backdrop-filter: blur(4px);
+    //     -webkit-backdrop-filter: blur(4px);
+    //     border-radius: 10px;
+    //     border: 1px solid rgba(255, 255, 255, 0.18);
+    // }
+}
+
+// Previewer Image
+body {
+    .styles-module_wrapper__1I_qj {
+        z-index: 10000;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .styles-module_navigation__1pqAE {
+        position: absolute;
+
+        &::before {
+            content: '';
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border: #fe2c55;
+            border-radius: 50%;
+            background-color: #fe2c55;
+            position: relative;
+        }
+    }
+
+    .styles-module_close__2I1sI {
+        &::before {
+            content: '';
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border: #fe2c55;
+            border-radius: 50%;
+            background-color: #fe2c55;
+        }
+
+        &::after {
+            width: 40px;
+            height: 40px;
+            border: #fe2c55;
+            border-radius: 50%;
+            background-color: #fe2c55;
+        }
+    }
+}
+
+// Custom firebase
+body {
+    #firebaseui-container {
+        font-family: var(--font-family);
+        margin: 0;
+    }
+
+    .firebaseui-idp-list,
+    .firebaseui-tenant-list {
+        margin: 0;
+    }
+}
+
+// Custom Nprocess
+body {
+    #nprogress .bar {
+        background: var(--primary-color);
+    }
+
+    #nprogress .peg {
+        box-shadow: 0 0 10px var(--primary-color), 0 0 5px var(--primary-color);
+    }
+}
+
+// Custom toast
+
+body {
+    .Toastify__toast {
+        z-index: 100001;
+    }
+}
+
+// star rating
+
+body {
+    .star-ratings {
+        display: flex !important;
+        align-items: center !important;
+    }
+    .star-container {
+        padding: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .widget-svg {
+        width: 20px !important;
+        height: 100% !important;
+    }
+}
+
+// Floating input
+body {
+    .login-required-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        justify-content: center;
+    }
+
+    .login-require-img {
+        width: 60%;
+        height: 60%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .login-require-tip {
+        font-size: 1.2rem;
+        opacity: 0.8;
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    .login-require-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 500;
+        color: #fff;
+        margin-top: 16px;
+        width: 30%;
+        height: 40px;
+        border-radius: 20px;
+        background-color: var(--primary-color);
+
+        &:hover {
+            background-color: var(--primary-color-hover);
+            cursor: pointer;
+        }
+    }
+
+    .login-require-close {
+        color: #de002c;
+        margin-top: 8px;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Scrollbar perfect custom
+body {
+    .scrollbar-container {
+        position: static !important;
+    }
+    .ps--active-x > .ps__rail-x,
+    .ps--active-y > .ps__rail-y {
+        margin-right: calc(-1 * (100vw - 100%)) !important;
+    }
+}
+
+// active link
+body {
+    .active {
+        // css underline button active
+        background-color: rgba(22, 24, 35, 0.1);
+        border-radius: 0;
+        color: var(--primary-color);
+        // animation underline button active
+    }
+}

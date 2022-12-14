@@ -1,0 +1,136 @@
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 400px;
+
+    @media (max-width: 739px) {
+        padding: 0 8px;
+    }
+
+    @media (min-width: 740px) and (max-width: 1023px) {
+        padding: 0 40px;
+    }
+
+    @media (min-width: 1024px) and (max-width: 1239px) {
+        padding: 0 50px;
+    }
+    .container {
+        width: 1150px;
+        height: fit-content;
+        height: -moz-max-content;
+        border: 1px solid rgba(22, 24, 35, 0.1);
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        padding: 12px 8px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        @media (max-width: 739px) {
+            border-radius: 0;
+        }
+
+        @media (min-width: 320px) and (max-width: 568px) {
+            margin-top: 60px;
+        }
+
+        @media (min-width: 414px) and (max-width: 736px) {
+            margin-top: 60px;
+        }
+
+        @media (min-width: 375px) and (max-width: 812px) {
+            margin-top: 60px;
+        }
+    }
+
+    .header {
+        .header__title {
+            font-size: 24px;
+            font-weight: 600;
+            color: rgb(22, 24, 35);
+            margin: 0;
+        }
+
+        .header__des {
+            padding: 16px 0;
+            span {
+                color: var(--primary-color);
+                font-weight: 500;
+            }
+        }
+    }
+
+    .otp__form {
+        padding: 50px 0 20px 0;
+    }
+
+    .btn__confirm {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+        button {
+            width: 150px;
+            height: 35px;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            background-color: var(--primary-color);
+            font-size: 1rem;
+            color: #fff;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+
+        .footer__item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .footer__item--des {
+            color: rgba(22, 24, 35, 0.4);
+        }
+
+        .resend-btn {
+            height: 35px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            button {
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                font-weight: 600;
+                color: var(--primary-color);
+                background-color: transparent;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(22, 24, 35, 0.08);
+                }
+            }
+        }
+    }
+}

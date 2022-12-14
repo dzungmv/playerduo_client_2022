@@ -1,0 +1,42 @@
+// Form acction
+.form__action {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 16px;
+    border-top: 1px solid rgba(22, 24, 35, 0.1);
+    padding-top: 8px;
+
+    .form__btn-primary {
+        width: 100px;
+        height: 40px;
+        border-radius: 8px;
+
+        button {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            outline: none;
+            border: none;
+            background-color: var(--primary-color);
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+
+    .form__btn-close {
+        color: #fff;
+        background-color: none;
+        color: var(--primary-color);
+        background-color: transparent;
+        outline: none;
+        border: none;
+        padding: 7px 12px;
+        border-radius: 8px;
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 24, 35, 0.1);
+        }
+    }
+}

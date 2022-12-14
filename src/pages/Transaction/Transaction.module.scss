@@ -1,0 +1,57 @@
+.wrapper {
+    margin-top: 60px;
+
+    .container {
+        padding: 8px 20px 0;
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #000;
+            padding-left: 100px;
+
+            @media screen and (max-width: 1023px) {
+                padding-left: 0;
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            .action__btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                font-weight: 500;
+
+                // animation underline when hover
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .topup__wrapper {
+            width: 80%;
+            margin-top: 16px;
+
+            height: calc(100vh - 200px);
+            overflow-y: auto;
+
+            @media screen and (max-width: 739px) {
+                width: 100%;
+            }
+        }
+    }
+}

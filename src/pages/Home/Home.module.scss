@@ -1,0 +1,62 @@
+.wrapper {
+    display: flex;
+    margin-top: 60px;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+    padding: 0 25px;
+    background-color: rgb(255, 255, 255);
+    @media screen and (max-width: 1023px) {
+        padding: 0 8px;
+    }
+
+    .global-chat {
+        position: fixed;
+        z-index: 100;
+        right: 40px;
+        bottom: 40px;
+
+        @media screen and (max-width: 739px) {
+            right: 12px;
+            bottom: 50px;
+        }
+    }
+
+    .side-bar {
+        flex: 1 0 20%;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1365px) {
+            flex: 1 0 25%;
+        }
+
+        @media screen and (max-width: 1023px) {
+            display: none;
+        }
+    }
+
+    .container {
+        margin-top: 16px;
+        padding-left: 20px;
+        padding-bottom: 8px;
+        flex: 2 0 80%;
+        height: calc(100vh - 60px);
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media screen and (min-width: 1024px) and (max-width: 1365px) {
+            flex: 2 0 75%;
+        }
+
+        @media screen and (max-width: 1023px) {
+            padding-left: 0;
+        }
+    }
+}

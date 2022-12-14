@@ -1,0 +1,107 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    padding: 0 8px;
+
+    // Not break page have scroll
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media (max-width: 1023px) {
+        padding: 0 8px;
+    }
+
+    .container {
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: var(--tooltip-boxshadow);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        position: relative;
+
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: 8px;
+            border-radius: 8px 8px 0 0;
+            border-bottom: 1px solid rgb(230, 230, 230);
+
+            .close {
+                width: 36px;
+                height: 36px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(22, 24, 35, 0.07);
+                position: absolute;
+                font-size: 1.7rem;
+                right: 2%;
+                border-radius: 50%;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgba(22, 24, 35, 0.2);
+                }
+            }
+        }
+    }
+
+    // set width of modal at different breakpoints
+
+    .large {
+        width: 70%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: var(--tooltip-boxshadow);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        position: relative;
+
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+
+    .medium {
+        width: 50%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: var(--tooltip-boxshadow);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        position: relative;
+
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+
+    .small {
+        width: 30%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 8px;
+        box-shadow: var(--tooltip-boxshadow);
+        max-height: calc(100vh - 60px);
+        overflow-y: auto;
+        position: relative;
+
+        @media screen and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+}
